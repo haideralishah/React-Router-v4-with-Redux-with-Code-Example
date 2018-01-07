@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import {connect} from 'react-redux';
 
 class About extends Component {
     render() {
@@ -12,5 +13,11 @@ class About extends Component {
     }
 }
 
+function mapStateToProp(state){
+    return({
+        userName: state.root.userName
+    })
+}
 
-export default About;
+
+export default connect(mapStateToProp,null)(About);

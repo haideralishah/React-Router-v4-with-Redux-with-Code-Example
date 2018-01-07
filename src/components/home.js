@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-
+import {connect} from 'react-redux';
+import {changeUserName} from '../store/action/action';
 class Home extends Component {
 
     _changeData(){
         console.log('event called');
+        this.props.changeUserName();
     }
 
     render() {
@@ -18,5 +20,16 @@ class Home extends Component {
     }
 }
 
-export default Home;
+function mapStateToProp(state){
+    return({
+        userName: state.root.userName
+    })
+}
+function mapDispatchToProp(dispatch){
+    return({
+        changeUserName: ()=>{dispatch(changeUserName())}
+    })
+}
+
+export default connect(mapStateToProp,mapDispatchToProp)(Home);
 
