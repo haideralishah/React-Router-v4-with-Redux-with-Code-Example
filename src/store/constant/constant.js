@@ -1,5 +1,6 @@
  const ActionTypes = {
-    USERNAME:'USERNAME'
+    USERNAME:'USERNAME',
+    CURRENTUSER:'CURRENTUSER'
 }
 
 export default ActionTypes;
