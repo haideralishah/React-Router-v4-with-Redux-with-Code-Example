@@ -7,9 +7,9 @@ import Signin from './components/signin';
 
 import Chat from './components/chat';
 
-import createBrowserHistory from 'history/createBrowserHistory'
+import history from './History';
 
-const history = createBrowserHistory()
+// export const history = createBrowserHistory()
 
 class Routers extends Component {
     render() {

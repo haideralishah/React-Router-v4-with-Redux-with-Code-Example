@@ -71,8 +71,8 @@ function mapStateToProp(state) {
 function mapDispatchToProp(dispatch) {
     return ({
         // changeUserName: ()=>{dispatch(changeUserName())}
-        signupwithEmailPassword: (user)=>{
-            dispatch(signupAction(user))
+        signupwithEmailPassword: (userDetails)=>{
+            dispatch(signupAction(userDetails));
         }
     })
 }
