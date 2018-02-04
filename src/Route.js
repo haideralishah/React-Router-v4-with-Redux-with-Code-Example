@@ -6,6 +6,8 @@ import Signup from './components/signup';
 import Signin from './components/signin';
 
 import Chat from './components/chat';
+import Navbar from './components/navbar';
+
 
 import history from './History';
 
@@ -16,6 +18,8 @@ class Routers extends Component {
         return (
             <Router history={history}>
                 <div>
+                    <Navbar />
+                    <hr />
                     <Route exact path="/" component={Home} />
                     <Route exact path="/about" component={About} />
                     <Route exact path="/signup" component={Signup} />
